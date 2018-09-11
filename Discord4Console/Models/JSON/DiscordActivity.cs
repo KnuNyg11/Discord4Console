@@ -15,16 +15,10 @@ namespace Discord4Console.Models.JSON
         public string application_id { get; set; }
         public string details { get; set; }
         public string state { get; set; }
-        public DiscordParty party { get; set; }
-        public DiscordAssets assets { get; set; }
-        public DiscordSecrets secrets { get; set; }
+        public DiscordActivityParty party { get; set; }
+        public DiscordActivityAssets assets { get; set; }
+        public DiscordActivitySecrets secrets { get; set; }
         public bool instance { get; set; }
         public int flags { get; set; }
-    }
-
-    class DiscordActivityTimestamps
-    {
-        public int start { get; set; }
-        public int end { get; set; }
     }
 }

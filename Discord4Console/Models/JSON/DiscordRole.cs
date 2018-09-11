@@ -17,5 +17,4 @@ namespace Discord4Console.Models.JSON
         public bool managed { get; set; }
         public bool mentionable { get; set; }
     }
-    }
 }

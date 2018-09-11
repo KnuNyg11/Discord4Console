@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net.Http;
 using System.Net;
+using System.Threading;
 
 namespace Discord4Console.Models
 {
@@ -27,15 +28,57 @@ namespace Discord4Console.Models
 
         public string Get(string url)
         {
-            return WebClient.DownloadString(url);
+            string response = "";
+            try
+            {
+                response = WebClient.DownloadString(url);
+                return response;
+            }
+            catch (WebException ex)
+            {
+                Console.WriteLine("RATEEEEE LIMITED");
+                WebClient.ResponseHeaders.Keys.Cast<string>().ToList().ForEach(h => Console.WriteLine(h));
+
+                Thread.Sleep(10000);
+
+                return Get(url);
+            }
         }
         public string Post(string url, string data)
         {
-            return WebClient.UploadString(url, "POST", data);
+            string response = "";
+            try
+            {
+                response = WebClient.UploadString(url, "POST", data);
+                return response;
+            }
+            catch (WebException ex)
+            {
+                Console.WriteLine("RATEEEEE LIMITED");
+                WebClient.ResponseHeaders.Keys.Cast<string>().ToList().ForEach(h => Console.WriteLine(h));
+
+                Thread.Sleep(10000);
+
+                return Post(url, data);
+            }
         }
         public string Put(string url, string data)
         {
-            return WebClient.UploadString(url, "PUT", data);
+            string response = "";
+            try
+            {
+                response = WebClient.UploadString(url, "PUT", data);
+                return response;
+            }
+            catch (WebException ex)
+            {
+                Console.WriteLine("RATEEEEE LIMITED");
+                WebClient.ResponseHeaders.Keys.Cast<string>().ToList().ForEach(h => Console.WriteLine(h));
+
+                Thread.Sleep(10000);
+
+                return Put(url, data);
+            }
         }
     }
 }

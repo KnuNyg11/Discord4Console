@@ -14,12 +14,14 @@ namespace Discord4Console
 {
     class Program
     {
+        DiscordClient Client { get; set; }
+
         static void Main(string[] args)
             => new Program();
 
         public Program()
         {
-            new Discord("ninjasploit+discord@gmail.com", "Figaro123");
+            Client = new DiscordClient("ninjasploit+discord@gmail.com", "Figaro123");
 
             Console.ReadLine();
         }

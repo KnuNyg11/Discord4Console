@@ -10,6 +10,8 @@ namespace Discord4Console.Models.JSON
     {
         public DiscordGuildUser user { get; set; }
         public List<string> roles { get; set; }
-        public 
+        public DiscordActivity game { get; set; }
+        public string guild_id { get; set; }
+        public string status { get; set; }
     }
 }

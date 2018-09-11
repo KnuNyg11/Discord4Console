@@ -46,8 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\Discord.cs" />
+    <Compile Include="Enums\DiscordActivityTypes.cs" />
     <Compile Include="Models\DiscordClient.cs" />
     <Compile Include="Models\JSON\DiscordActivity.cs" />
+    <Compile Include="Models\JSON\DiscordActivityAssets.cs" />
+    <Compile Include="Models\JSON\DiscordActivityParty.cs" />
+    <Compile Include="Models\JSON\DiscordActivitySecrets.cs" />
+    <Compile Include="Models\JSON\DiscordActivityTimestamps.cs" />
     <Compile Include="Models\JSON\DiscordChannelOverwrite.cs" />
     <Compile Include="Models\JSON\DiscordEmoji.cs" />
     <Compile Include="Models\JSON\DiscordGuild.cs" />
@@ -55,6 +61,7 @@
     <Compile Include="Models\JSON\DiscordGuildMember.cs" />
     <Compile Include="Models\JSON\DiscordGuildUser.cs" />
     <Compile Include="Models\JSON\DiscordPresence.cs" />
+    <Compile Include="Models\JSON\DiscordRateLimit.cs" />
     <Compile Include="Models\JSON\DiscordRole.cs" />
     <Compile Include="Models\JSON\DiscordUserGuild.cs" />
     <Compile Include="Models\JSON\DiscordUser.cs" />
@@ -62,7 +69,6 @@
     <Compile Include="Models\JSON\LoginRequest.cs" />
     <Compile Include="Models\JSON\LoginResponse.cs" />
     <Compile Include="Objects\GatewayPayload.cs" />
-    <Compile Include="Models\Discord.cs" />
     <Compile Include="Models\NetClient.cs" />
     <Compile Include="Objects\GenericPayload.cs" />
     <Compile Include="Objects\HeartbeatPayload.cs" />
